@@ -52,4 +52,5 @@ app.get('/bad', (req, res) => {
   res.send({errorMessage: 'Unable to find route'});
 });
 
-app.listen(3000, () => console.log('App running in port 3000'));
+const PORT = process.env.PORT || 3000;
+app.listen( PORT, () => console.log(`App running in port ${PORT}`));
